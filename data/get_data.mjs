@@ -26,5 +26,5 @@ function run(path) {
     });
 }
 
-//Run the rei_scraper file
+//Run the rei_scraper file and push the data to Mongo
 run('./rei_scraper.py')
