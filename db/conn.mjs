@@ -1,6 +1,6 @@
+import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 dotenv.config();
-import { MongoClient } from "mongodb";
 
 const connectionString = process.env.MONGO_URI || "";
 

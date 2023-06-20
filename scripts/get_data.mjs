@@ -1,3 +1,8 @@
+/*
+Scrape REI.com and push the data to Mongo
+$ cd scripts && node get_data.mjs
+*/
+
 import { spawn } from 'child_process';
 import push from './push_data.mjs';
 
@@ -15,16 +20,15 @@ function run(path) {
         console.log(`stderr: ${stderr}`);
     });
 
-    // When script is finished, print collected data
+    // When script is finished, push to Mongo
     pyProg.on('close', (code) => {
-        // console.log(JSON.parse(data))
         if (data) {
             console.log("Pushing to Mongo...")
-            push('products', JSON.parse(data))
+            console.log(JSON.parse(data)[0])
+            // push('products', JSON.parse(data))
         }
         console.log(`child process exited with code ${code}`);
     });
 }
 
-//Run the rei_scraper file and push the data to Mongo
-run('./rei_scraper.py')
+run('./scrape_data.py')

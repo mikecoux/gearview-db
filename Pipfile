@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 bs4 = "*"
 requests = "*"
+pymongo = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
