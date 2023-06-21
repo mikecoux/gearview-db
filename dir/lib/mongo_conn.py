@@ -4,10 +4,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
-connectionString = os.environ.get("MONGO_URI")
+connection_string = os.environ.get("MONGO_URI")
 
 # Create a new client and connect to the server
-client = MongoClient(connectionString, server_api=ServerApi('1'))
+client = MongoClient(connection_string, server_api=ServerApi('1'))
 
 # Send a ping to confirm a successful connection
 try:

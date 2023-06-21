@@ -1,6 +1,13 @@
 from algoliasearch.search_client import SearchClient
+from dotenv import load_dotenv
+load_dotenv()
 
-client = SearchClient.create("5D3D94T0SR", "135ada3f74a82b75019527647592b77c")
+import os
+app_id = os.environ.get("ALGOLIA_APP_ID")
+write_key = os.environ.get("ALGOLIA_WRITE_KEY")
+
+
+client = SearchClient.create(app_id, write_key)
 
 try:
     index = client.init_index('test_index')
