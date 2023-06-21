@@ -11,6 +11,6 @@ client = SearchClient.create(app_id, write_key)
 
 try:
     index = client.init_index('test_index')
-    print("Algolia client connected.")
+    print(f"Algolia App #{index.app_id} connected.")
 except Exception as e:
     print(e)
