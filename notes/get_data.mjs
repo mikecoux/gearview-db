@@ -1,10 +1,9 @@
 /*
-Scrape REI.com and push the data to Mongo
-$ cd scripts && node get_data.mjs
+Runs a child process to get Python objects into JS
 */
 
 import { spawn } from 'child_process';
-import push from './push_data.mjs';
+import push from '../dir/push_data.mjs';
 
 function run(path) {
     const pyProg = spawn('python', [path]);
