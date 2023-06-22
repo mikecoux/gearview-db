@@ -9,6 +9,8 @@ requests = "*"
 pymongo = "*"
 python-dotenv = "*"
 algoliasearch = "*"
+faker = "*"
+cloudinary = "*"
 
 [dev-packages]
 

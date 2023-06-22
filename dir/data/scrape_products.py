@@ -30,9 +30,6 @@ def scrape_products():
 
         products.append(new_product)
         
-    return json.dumps(products)
+    return products
 
 all_products = scrape_products()
-
-# if __name__ == "__main__":
-#     print(create_product_dict())

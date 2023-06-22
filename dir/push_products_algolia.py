@@ -1,4 +1,7 @@
-'''Pull records from MongoDB, structure the data, and then send to Algolia'''
+'''
+Pull records from MongoDB, structure the data, and then send to Algolia
+Note: Clear the Algolia index via the dashboard before running this script
+'''
 
 from lib.mongo_conn import client as mongo_client
 from lib.algolia_conn import client as algolia_client
@@ -10,7 +13,7 @@ products = db['products']
 # Connect to Algolia 'products' index
 index = algolia_client.init_index("gearview_products")
 
-# Pull all products and push to Algolia
+# Pull all products from Mongo and push to Algolia
 try:
     for product in products.find():
         record = {
