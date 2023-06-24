@@ -27,7 +27,7 @@ def create_reviews():
         
         new_review = {
             "username": username,
-            "rating": rating,
+            "rating": str(rating),
             "description": description
         }
         

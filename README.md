@@ -6,17 +6,11 @@
     pipenv install && pipenv shell
 &nbsp;
 
-## Scripts
+## Instructions:
 
-### Scrape data from REI.com and upload to a MongoDB collection
-*from the dir directory*
-
-    python push_mongo.py
-### Pull documents from the 'products' collection and create records in Algolia
-*from the dir directory*
-
-    python push_algolia.py
-
-### Download images from REI and save them locally
-
-### Upload images from local storage to Cloudinary
+1. Delete Cloudinary images folder ("rei_images")
+2. Push images to Cloudinary - this will run the product scraper, encode the images, and push new images to Cloudinary
+3. Seed products - this will run the product scraper , fetch Cloudinary image links, and create new products in the Mongo "products" collection that contain corresponding Cloudinary image urls
+4. Seed reviews - this will create 200 new reviews in the Mongo "reviews" collection with associated product Ids
+5. Clear the Algolia index ("gearview-products")
+6. Push new products to Algolia
