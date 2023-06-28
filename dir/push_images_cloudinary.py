@@ -1,3 +1,5 @@
+'''STEP ONE: Push images to cloudinary whose image id matches the REI src URL'''
+
 import requests
 import base64
 import json
@@ -48,6 +50,6 @@ for image in encoded_images:
     upload = uploader.upload(data_uri, 
         public_id = image['name'],
         unique_filename = False,
-        folder = "test")
+        folder = "rei_images")
     
     print("**** Base 64 Data URI ****\nDelivery URL: ", json.dumps(upload,indent=2), "\n")

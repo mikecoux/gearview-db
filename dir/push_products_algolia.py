@@ -1,4 +1,5 @@
 '''
+STEP 4:
 Pull records from MongoDB, structure the data, and then send to Algolia
 Note: Clear the Algolia index via the dashboard before running this script
 '''

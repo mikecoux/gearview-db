@@ -1,4 +1,4 @@
-'''Assign products ids and push reviews to Mongo'''
+'''STEP 3: Assign products ids and push reviews to Mongo'''
 
 from lib.mongo_conn import client as mongo_client
 from data.fake_reviews import fake_reviews

@@ -22,13 +22,17 @@ def create_reviews():
         # add a rating between 1 and 5
         rating = randint(1,5)
         
+        # add between -10 and 10 votes
+        votes = randint(-10, 10)
+        
         # create a fake review description with 3 sentences
         description = fake.paragraph(nb_sentences=3)
         
         new_review = {
             "username": username,
             "rating": str(rating),
-            "description": description
+            "description": description,
+            "votes": str(votes)
         }
         
         reviews.append(new_review)
